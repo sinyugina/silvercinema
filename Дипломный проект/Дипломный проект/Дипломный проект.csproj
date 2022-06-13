@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0224120-210B-4461-BBD3-26215AEF213C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Дипломный_проект</RootNamespace>
+    <AssemblyName>Дипломный проект</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\DataGridExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Forms\Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Buy.Designer.cs">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlaceAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlaceAdd.Designer.cs">
+      <DependentUpon>PlaceAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlaceViewModel.cs" />
+    <Compile Include="Poster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Poster.Designer.cs">
+      <DependentUpon>Poster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CityAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CityAdd.Designer.cs">
+      <DependentUpon>CityAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilmAdd.Designer.cs">
+      <DependentUpon>FilmAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SessionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SessionAdd.Designer.cs">
+      <DependentUpon>SessionAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeAdd.Designer.cs">
+      <DependentUpon>TimeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgeLimit.cs" />
+    <Compile Include="Models\FilmViewModel.cs" />
+    <Compile Include="Models\CityViewModel.cs" />
+    <Compile Include="Models\SessionViewModel.cs" />
+    <Compile Include="Models\TimeAddModel.cs" />
+    <Compile Include="Models\TimeViewModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="silverCinemaEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>silverCinemaEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="silverCinemaEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="silverCinemaEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>silverCinemaEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Билеты.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Время.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Город.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Жанр.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Места.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Сеанс.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Фильм.cs">
+      <DependentUpon>silverCinemaEntities.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Buy.resx">
+      <DependentUpon>Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlaceAdd.resx">
+      <DependentUpon>PlaceAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Poster.resx">
+      <DependentUpon>Poster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CityAdd.resx">
+      <DependentUpon>CityAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FilmAdd.resx">
+      <DependentUpon>FilmAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SessionAdd.resx">
+      <DependentUpon>SessionAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeAdd.resx">
+      <DependentUpon>TimeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="silverCinemaEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>silverCinemaEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="silverCinemaEntities.edmx.diagram">
+      <DependentUpon>silverCinemaEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="silverCinemaEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>silverCinemaEntities.edmx</DependentUpon>
+      <LastGenOutput>silverCinemaEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="silverCinemaEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>silverCinemaEntities.edmx</DependentUpon>
+      <LastGenOutput>silverCinemaEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

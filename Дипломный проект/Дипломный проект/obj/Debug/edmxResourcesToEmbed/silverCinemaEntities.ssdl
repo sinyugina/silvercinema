@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище silverCinemaModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Билеты">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Места" Type="int" Nullable="false" />
+    <Property Name="Id_Сеанс" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Время">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Дата" Type="date" Nullable="false" />
+    <Property Name="Время" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Город">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Жанр">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Места">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ряд" Type="int" Nullable="false" />
+    <Property Name="Место" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Сеанс">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Фильм" Type="int" Nullable="false" />
+    <Property Name="Id_Город" Type="int" Nullable="false" />
+    <Property Name="Id_Время" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Фильм">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Описание" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Цена" Type="int" Nullable="false" />
+    <Property Name="Возрастное_ограничение" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Длительность" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="Id_Жанр" Type="int" Nullable="false" />
+    <Property Name="Постер" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_Билеты_Места">
+    <End Role="Места" Type="Self.Места" Multiplicity="1" />
+    <End Role="Билеты" Type="Self.Билеты" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Места">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Билеты">
+        <PropertyRef Name="Id_Места" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Билеты_Сеанс">
+    <End Role="Сеанс" Type="Self.Сеанс" Multiplicity="1" />
+    <End Role="Билеты" Type="Self.Билеты" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сеанс">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Билеты">
+        <PropertyRef Name="Id_Сеанс" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сеанс_Время">
+    <End Role="Время" Type="Self.Время" Multiplicity="1" />
+    <End Role="Сеанс" Type="Self.Сеанс" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Время">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Сеанс">
+        <PropertyRef Name="Id_Время" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сеанс_Город">
+    <End Role="Город" Type="Self.Город" Multiplicity="1" />
+    <End Role="Сеанс" Type="Self.Сеанс" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Город">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Сеанс">
+        <PropertyRef Name="Id_Город" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сеанс_Фильм">
+    <End Role="Фильм" Type="Self.Фильм" Multiplicity="1" />
+    <End Role="Сеанс" Type="Self.Сеанс" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Фильм">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Сеанс">
+        <PropertyRef Name="Id_Фильм" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Фильм_Жанр">
+    <End Role="Жанр" Type="Self.Жанр" Multiplicity="1" />
+    <End Role="Фильм" Type="Self.Фильм" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Жанр">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Фильм">
+        <PropertyRef Name="Id_Жанр" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище silverCinemaModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Билеты" EntityType="Self.Билеты" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Время" EntityType="Self.Время" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Город" EntityType="Self.Город" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Жанр" EntityType="Self.Жанр" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Места" EntityType="Self.Места" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Сеанс" EntityType="Self.Сеанс" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Фильм" EntityType="Self.Фильм" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Билеты_Места" Association="Self.FK_Билеты_Места">
+      <End Role="Места" EntitySet="Места" />
+      <End Role="Билеты" EntitySet="Билеты" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Билеты_Сеанс" Association="Self.FK_Билеты_Сеанс">
+      <End Role="Сеанс" EntitySet="Сеанс" />
+      <End Role="Билеты" EntitySet="Билеты" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сеанс_Время" Association="Self.FK_Сеанс_Время">
+      <End Role="Время" EntitySet="Время" />
+      <End Role="Сеанс" EntitySet="Сеанс" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сеанс_Город" Association="Self.FK_Сеанс_Город">
+      <End Role="Город" EntitySet="Город" />
+      <End Role="Сеанс" EntitySet="Сеанс" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сеанс_Фильм" Association="Self.FK_Сеанс_Фильм">
+      <End Role="Фильм" EntitySet="Фильм" />
+      <End Role="Сеанс" EntitySet="Сеанс" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Фильм_Жанр" Association="Self.FK_Фильм_Жанр">
+      <End Role="Жанр" EntitySet="Жанр" />
+      <End Role="Фильм" EntitySet="Фильм" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

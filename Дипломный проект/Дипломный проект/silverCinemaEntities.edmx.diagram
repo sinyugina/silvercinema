@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4b095be2f704640a535839391c4ae89" Name="Diagram1">
+        <EntityTypeShape EntityType="silverCinemaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Билеты" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Время" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Город" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Жанр" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Места" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Сеанс" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="silverCinemaModel.Фильм" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="silverCinemaModel.FK_Билеты_Места" ManuallyRouted="false" />
+        <AssociationConnector Association="silverCinemaModel.FK_Билеты_Сеанс" ManuallyRouted="false" />
+        <AssociationConnector Association="silverCinemaModel.FK_Сеанс_Время" ManuallyRouted="false" />
+        <AssociationConnector Association="silverCinemaModel.FK_Сеанс_Город" ManuallyRouted="false" />
+        <AssociationConnector Association="silverCinemaModel.FK_Фильм_Жанр" ManuallyRouted="false" />
+        <AssociationConnector Association="silverCinemaModel.FK_Сеанс_Фильм" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

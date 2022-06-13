@@ -1,0 +1,25 @@
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\Дипломный проект.exe.config
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\Дипломный проект.exe
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\Дипломный проект.pdb
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\EntityFramework.dll
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\EntityFramework.xml
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.csproj.AssemblyReference.cache
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.csproj.SuggestedBindingRedirects.cache
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Properties.Resources.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.csproj.GenerateResource.cache
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.csproj.CoreCompileInputs.cache
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.csproj.CopyComplete
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.exe
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный проект.pdb
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.Auth.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.AdminPanel.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.TimeAdd.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.FilmAdd.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Poster.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.CityAdd.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.SessionAdd.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Models.Buy.resources
+C:\Users\quiiz\Desktop\диплом девочка\диплом девочка\Дипломный проект\Дипломный проект\obj\Debug\Дипломный_проект.Forms.PlaceAdd.resources

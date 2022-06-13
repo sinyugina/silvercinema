@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище silverCinemaModelContainer" CdmEntityContainer="silverCinemaEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="silverCinemaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Время">
+      <EntityTypeMapping TypeName="silverCinemaModel.Время">
+        <MappingFragment StoreEntitySet="Время">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Дата" ColumnName="Дата" />
+          <ScalarProperty Name="Время1" ColumnName="Время" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Город">
+      <EntityTypeMapping TypeName="silverCinemaModel.Город">
+        <MappingFragment StoreEntitySet="Город">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Жанр">
+      <EntityTypeMapping TypeName="silverCinemaModel.Жанр">
+        <MappingFragment StoreEntitySet="Жанр">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Фильм">
+      <EntityTypeMapping TypeName="silverCinemaModel.Фильм">
+        <MappingFragment StoreEntitySet="Фильм">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Описание" ColumnName="Описание" />
+          <ScalarProperty Name="Возрастное_ограничение" ColumnName="Возрастное_ограничение" />
+          <ScalarProperty Name="Длительность" ColumnName="Длительность" />
+          <ScalarProperty Name="Id_Жанр" ColumnName="Id_Жанр" />
+          <ScalarProperty Name="Постер" ColumnName="Постер" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Сеанс">
+      <EntityTypeMapping TypeName="silverCinemaModel.Сеанс">
+        <MappingFragment StoreEntitySet="Сеанс">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_Фильм" ColumnName="Id_Фильм" />
+          <ScalarProperty Name="Id_Город" ColumnName="Id_Город" />
+          <ScalarProperty Name="Id_Время" ColumnName="Id_Время" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
